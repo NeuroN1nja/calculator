@@ -128,7 +128,7 @@ class Calculator extends Component {
         console.log(e.charCode)
         if (e.charCode === 61) {
             this.getResult()
-        } else if (e.charCode === 114) {
+        } else if (e.charCode === 114 || e.charCode === 1082) {
             this.reset()
         } else if (numKeysEvent[e.charCode]) {
             this.addOperand(numKeysEvent[e.charCode])
