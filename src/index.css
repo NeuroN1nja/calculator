@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 240px;
+  flex-wrap: wrap;
+  min-width: 240px;
+  position: relative;
+  margin: auto;
+}
+
+button {
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 40px;
+  align-self: flex-start;
+}
+
+.xs {
+  min-width: 120px;
+}
+
+.btn-outline-success {
+  position: absolute;
+  top: 120px;
+  left: 180px;
+  min-height: 80px;
+}
+
+.alert-dark {
+  min-height: 50px;
+}
+
+h1 {
+  font-size: 20px;
+}
