@@ -24,7 +24,7 @@ class Calculator extends Component {
     }
 
     addOperand = (e) => {
-        const { operations, argum1 } = this.state
+        const { operations, argum1, argum2 } = this.state
         console.log(e.target)
         if (
             (e.target.value === '.'
@@ -39,6 +39,7 @@ class Calculator extends Component {
         ) {
             this.setState({
             argum1: e.target.value,
+            argum2: '',
             operations: e.target.value
             })
         } else {
