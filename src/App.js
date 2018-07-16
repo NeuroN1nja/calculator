@@ -20,7 +20,7 @@ class Calculator extends Component {
     }
     
     componentDidMount() {
-        ReactDOM.findDOMNode(this.refs.myTestInput).focus();
+        this.equalSign.focus();
     }
 
     addOperand = (e) => {
@@ -149,7 +149,7 @@ class Calculator extends Component {
                 <h1 className={styling.alert}>{this.state.operations}</h1>
 
                 <div >
-                    <button ref='myTestInput' className="btn btn-outline-danger xs" onClick={this.reset}> AC </button>
+                    <button className="btn btn-outline-danger xs" onClick={this.reset}> AC </button>
                     <button className={styling.operations} value="*" onClick={this.changeOperation}> * </button>
                     <button className={styling.operations} value="/" onClick={this.changeOperation}> / </button>
                     <button className={styling.numbers} value="7" onClick={this.addOperand}> 7 </button>
@@ -165,7 +165,7 @@ class Calculator extends Component {
                     <button className={styling.numbers} value="3" onClick={this.addOperand}> 3 </button>
                     <button className="btn btn-outline-dark xs" value="." onClick={this.addOperand}> . </button>
                     <button className={styling.numbers} value="0" onClick={this.addOperand}> 0 </button>
-                    <button className={styling.success} onClick={this.getResult}> = </button>
+                    <button ref={node => this.equalSign = node} className={styling.success} onClick={this.getResult}> = </button>
                 </div>
             </section>
         );
